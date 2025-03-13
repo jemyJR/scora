@@ -18,27 +18,27 @@ export const metadata = {
 };
 
 const NAVIGATION = [
-  { 
+  {
     segment: 'home',
     title: 'Home',
     icon: <HomeIcon />,
   },
-  { 
+  {
     segment: 'competitions',
     title: 'Competitions',
     icon: <EmojiEventsIcon />,
   },
-  { 
+  {
     segment: 'teams',
     title: 'Teams',
     icon: <GroupsIcon />,
   },
-  { 
+  {
     segment: 'persons',
     title: 'Persons',
     icon: <PersonIcon />,
   },
-  { 
+  {
     segment: 'matches',
     title: 'Matches',
     icon: <SportsSoccerIcon />,
@@ -46,25 +46,55 @@ const NAVIGATION = [
 ];
 
 const BRANDING = {
-  title: <Typography variant="h6" color="#C3CC5A" fontWeight="700"  fontStyle={{fontStyle: 'italic'}}>Scora</Typography>,
-  logo: <SportsSoccerIcon sx={{ color: '#C3CC5A' }}  fontSize="large" />,
+  title: <Typography variant="h6" color="#C3CC5A" fontWeight="700" fontStyle={{ fontStyle: 'italic' }}>Scora</Typography>,
+  logo: <SportsSoccerIcon sx={{ color: '#C3CC5A' }} fontSize="large" />,
 };
 
 export default function RootLayout({ children }) {
+  const customToolpadStyle = {
+    // "& .MuiButtonBase-root": {
+    //   color: "red", 
+    // },
+    "& .MuiIconButton-root[aria-label='Switch to dark mode']": {
+      color: "#C3CC5A",
+    },
+    "& .MuiIconButton-root[aria-label='Switch to light mode']": {
+      color: "#C3CC5A",
+    },
+    "& .MuiListItemButton-root.Mui-selected": {
+      backgroundColor: "transparent",
+      "& .MuiTypography-root": {
+        color: "#C3CC5A",
+      },
+      "& .MuiSvgIcon-root": {
+        color: '#C3CC5A',
+      },
+      "&:hover": {
+        backgroundColor: "transparent",
+      },
+      "&:focus": {
+        backgroundColor: "transparent",
+      },
+      "&:active": {
+        backgroundColor: "transparent",
+      },
+    },
+  }
   return (
     <html lang="en">
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <React.Suspense fallback={<LinearProgress />}>
-            <NextAppProvider navigation={NAVIGATION} branding={BRANDING}>
-            <DashboardLayout> 
-                {children}
-              </DashboardLayout>
-            </NextAppProvider>
-          </React.Suspense>
-        </ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <React.Suspense fallback={<LinearProgress />}>
+              <NextAppProvider navigation={NAVIGATION} branding={BRANDING}>
+                <DashboardLayout
+                  sx={customToolpadStyle}>
+                  {children}
+                </DashboardLayout>
+              </NextAppProvider>
+            </React.Suspense>
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
