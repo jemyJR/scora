@@ -1,8 +1,14 @@
+import CustomAppBar from '../../components/CustomAppBar';
+import CompetitionsGrid from './components/CompetitionsGrid';
+import data from './data.json';
 
-export default function page() {
+const CompetitionsPage = () => {
   return (
-    <div>
-        Competition List
-    </div>
-  )
-}
+    <>
+      <CustomAppBar title="Football Competitions"/>
+      <CompetitionsGrid data={data}></CompetitionsGrid>
+    </>
+  );
+};
+
+export default CompetitionsPage;
