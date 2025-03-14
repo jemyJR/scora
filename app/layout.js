@@ -62,22 +62,22 @@ export default function RootLayout({ children }) {
       color: "#C3CC5A",
     },
     "& .MuiListItemButton-root.Mui-selected": {
-      backgroundColor: "transparent",
-      "& .MuiTypography-root": {
-        color: "#C3CC5A",
-      },
+      backgroundColor: "#C3CC5A4D",
+      // "& .MuiTypography-root": {
+      //   color: "#C3CC5A",
+      // },
       "& .MuiSvgIcon-root": {
         color: '#C3CC5A',
       },
-      "&:hover": {
-        backgroundColor: "transparent",
-      },
-      "&:focus": {
-        backgroundColor: "transparent",
-      },
-      "&:active": {
-        backgroundColor: "transparent",
-      },
+      // "&:hover": {
+      //   backgroundColor: "#C3CC5A",
+      // },
+      // "&:focus": {
+      //   backgroundColor: "#C3CC5A",
+      // },
+      // "&:active": {
+      //   backgroundColor: "transparent",
+      // },
     },
   }
   return (

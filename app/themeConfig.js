@@ -3,10 +3,10 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
-    primary: {
+    brand: {
       main: '#C3CC5A',
-      contrastText: '#ffffff', 
-    },
+      transparent: '#C3CC5A4D'
+    }
   },
   components: {
     MuiDrawer: {
