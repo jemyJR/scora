@@ -1,7 +1,7 @@
+import { getPlanColor } from '@/app/helpers';
 import { Military } from '@mui/icons-material';
 import { Box, Chip, Typography } from '@mui/material';
 import { formatDistanceToNow } from 'date-fns';
-import { getPlanColor } from '../helpers';
 
 export default function CompetitionCardFooter({ competition }) {
   return (

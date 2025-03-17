@@ -19,6 +19,10 @@ export const metadata = {
 
 const NAVIGATION = [
   {
+    kind: 'header',
+    title: 'Scora',
+  },
+  {
     segment: 'home',
     title: 'Home',
     icon: <HomeIcon />,
@@ -42,6 +46,10 @@ const NAVIGATION = [
     segment: 'matches',
     title: 'Matches',
     icon: <SportsSoccerIcon />,
+  },
+  {
+    kind: 'header',
+    title: 'Saved',
   },
 ];
 

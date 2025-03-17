@@ -5,3 +5,7 @@ export const getPlanColor = (plan) => {
     default: return 'primary';
   }
 };
+
+export const formatSeasonYear = (startDate) => {
+  return new Date(startDate).getFullYear();
+};
